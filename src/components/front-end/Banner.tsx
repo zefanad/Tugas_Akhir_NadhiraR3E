@@ -2,9 +2,9 @@ const Banner = () => {
     return (
         <div className="container mt-16 lg:mt-24">
             <div className="grid grid-cols-1 lg:grid-cols-[66%,34%] gap-6 lg:gap-8 pr-4 lg:pr-0">
-                {/* Gabungan Left dan Right Banner */}
+                {/* Left Banner */}
                 <div 
-                    className="h-[300px] md:h-[400px] lg:h-[500px] bg-[url('/products/header.jpg')] bg-cover bg-center rounded-xl p-6 md:p-10 lg:p-12 flex flex-col justify-between shadow-md hover:shadow-lg transition-shadow"
+                    className="h-[200px] md:h-[260px] lg:h-[300px] bg-[url('/products/header-svt.jpg')] bg-cover bg-center rounded-xl p-6 md:p-10 lg:p-12 flex flex-col justify-between shadow-md hover:shadow-lg transition-shadow"
                 >
                     <div>
                         <p className="text-blue-400 text-lg md:text-xl font-medium">
@@ -21,6 +21,11 @@ const Banner = () => {
                         Shop Now
                     </a>
                 </div>
+
+                {/* Right Banner */}
+                <div 
+                    className="h-[200px] md:h-[260px] lg:h-[300px] bg-[url('/products/seventeen-best-album-dear-version.png')] bg-cover bg-center rounded-xl hidden lg:block shadow-md hover:shadow-lg transition-shadow"
+                />
             </div>
         </div>
     );
