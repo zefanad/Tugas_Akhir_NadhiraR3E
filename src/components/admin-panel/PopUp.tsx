@@ -13,13 +13,15 @@ interface PropsType{
 const Popup = ({setOpenPopup, setUpdateTable}: PropsType) => {
 
 const productData = useAppSelector((state) => state.productReducer)
-const dispatch = useAppDispatch()
+const initialInputData = {
+  name: productData.name || "",
+  category: productData.category || "",
+  price: productData.price || 0
+}
 
-const [inputData, setInputData] = useState({
-  name: productData.name,
-  category: productData.category,
-  price: productData.price
-})
+const [inputData, setInputData] = useState(initialInputData);
+const dispatch = useAppDispatch();
+
 
 const handleSubmit = (e: FormEvent) => {
   e.preventDefault()
