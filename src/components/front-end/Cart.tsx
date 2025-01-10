@@ -18,8 +18,11 @@ interface Product {
 const Cart: React.FC<CartProps> = ({ setShowCart }) => {
   const products = useAppSelector((state) => state.cartReducer) as Product[];
 
-  const getTotal = () =>
-    products.reduce((total, item) => total + item.price * item.quantity, 0);
+  const getTotal = () => {
+    let total = 0;
+    products.forEach((item: { price: number; quantity: number; }) => (total = total + item.price * item.quantity));
+    return total;
+};
 
   return (
     <div
