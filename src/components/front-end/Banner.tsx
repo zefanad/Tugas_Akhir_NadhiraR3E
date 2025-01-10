@@ -4,7 +4,7 @@ const Banner = () => {
             <div className="grid grid-cols-1 lg:grid-cols-[66%,34%] gap-6 lg:gap-8 pr-4 lg:pr-0">
                 {/* Left Banner */}
                 <div 
-                    className="h-[200px] md:h-[260px] lg:h-[300px] bg-[url('/products/svt-heaven-ver.png')] bg-cover bg-center rounded-xl p-6 md:p-10 lg:p-12 flex flex-col justify-between shadow-md hover:shadow-lg transition-shadow"
+                    className="h-[200px] md:h-[260px] lg:h-[300px] bg-[url('/products/header.jpg')] bg-cover bg-center rounded-xl p-6 md:p-10 lg:p-12 flex flex-col justify-between shadow-md hover:shadow-lg transition-shadow"
                 >
                     <div>
                         <p className="text-blue-400 text-lg md:text-xl font-medium">
