@@ -21,20 +21,32 @@ const CartProduct: React.FC<PropsType> = ({
   const dispatch = useAppDispatch();
 
   return (
-    <div className="flex justify-between items-center">
+    <div className="flex justify-between items-center py-4 border-b">
+      {/* Product Details */}
       <div className="flex items-center gap-4">
-       <Image className="h-[80px]" src="{img}" alt={title} />
-       <div className="space-y-2">
-        <h3 className="font-medium">{title}</h3>
-        <p className="text-gray-600 text-[14px]">
-            {quantity} x ${price}.00
-        </p>
-       </div>
+        {/* Product Image */}
+        <Image
+          className="h-[80px] w-[80px] object-cover rounded"
+          src={img}
+          alt={title}
+          width={80}
+          height={80}
+        />
+        
+        {/* Product Info */}
+        <div className="space-y-1">
+          <h3 className="font-medium text-gray-800">{title}</h3>
+          <p className="text-gray-600 text-sm">
+            {quantity} x ${price.toFixed(2)}
+          </p>
+        </div>
       </div>
 
+      {/* Remove Icon */}
       <RxCross1
-      className="cursor-pointer"
-      onClick={() => dispatch(removeFromCart(id))}
+        className="cursor-pointer text-gray-600 hover:text-red-500 transition-colors"
+        onClick={() => dispatch(removeFromCart(id))}
+        aria-label={`Remove ${title} from cart`}
       />
     </div>
   );
